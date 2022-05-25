@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <a class="buttonchart" href="/chart">Wykres</a>
+    {% for table in tables %}
+        {{ table|safe }}
+    {% endfor %}
+
+</body>
+</html>
+
